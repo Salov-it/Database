@@ -12,25 +12,16 @@ namespace WebApi.Controllers
         {
            this.mediator = mediator;
         }
-        // GET: api/<TestDataBaseController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+       
+        [HttpPost("Add")]
+        public async Task<IActionResult> Add()
         {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<TestDataBaseController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<TestDataBaseController>
-        [HttpPost]
-        public void Post(string Table, string entity, string Fields, string VALUES)
-        {
-            
+            var content = new PostAuthorizationCommand
+            {
+                authorizationModel = authorizationModel
+            };
+            var answer = await mediator.Send(content);
+            return Ok(answer);
         }
 
         // PUT api/<TestDataBaseController>/5
