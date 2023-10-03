@@ -1,0 +1,12 @@
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\bin\Debug\net7.0\Database.Application.deps.json
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\bin\Debug\net7.0\Database.Application.dll
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\bin\Debug\net7.0\Database.Application.pdb
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.csproj.AssemblyReference.cache
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.AssemblyInfoInputs.cache
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.AssemblyInfo.cs
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.csproj.CoreCompileInputs.cache
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.dll
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\refint\Database.Application.dll
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.pdb
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\ref\Database.Application.dll

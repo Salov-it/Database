@@ -11,12 +11,12 @@ namespace Database.Application.PostgresDatabase
             _repository = repository;
         }
 
-        public async void Add(string Table,string entity)
+        public async void Add(string Table,string entity,string Fields, string VALUES)
         {
             await using var dataSource = NpgsqlDataSource.Create(Config.PostgresConnectionString);
-            await using (var cmd = dataSource.CreateCommand($"INSERT INTO {Table} (some_field) VALUES ($1)"))
+            await using (var cmd = dataSource.CreateCommand($"INSERT INTO {Table} ({Fields}) VALUES ({VALUES})"))
             {
-                cmd.Parameters.AddWithValue(entity);
+                cmd.Parameters.AddWithValue(Fields,entity);
                 await cmd.ExecuteNonQueryAsync();
             }
         }
