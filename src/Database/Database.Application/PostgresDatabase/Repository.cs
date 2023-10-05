@@ -11,6 +11,12 @@ namespace Database.Application.PostgresDatabase
         {
             _connect = config.PostgresConnectionString;
         }
+
+        public void UserCreateTable()
+        {
+            throw new NotImplementedException();
+        }
+
         public async void UserAdd(string Login,string Password,string AccessToken)
         {
             await using var dataSource = NpgsqlDataSource.Create(_connect);
@@ -21,11 +27,6 @@ namespace Database.Application.PostgresDatabase
                 cmd.Parameters.AddWithValue("AccessToken",AccessToken);
                 await cmd.ExecuteNonQueryAsync();
             }  
-        }
-
-        public void Delete(string entity)
-        {
-            throw new NotImplementedException();
         }
 
         public List<string> GetAll()
@@ -43,9 +44,10 @@ namespace Database.Application.PostgresDatabase
             throw new NotImplementedException();
         }
 
-        public void UserCreateTable()
+        public void Delete(string entity)
         {
             throw new NotImplementedException();
         }
+
     }
 }
