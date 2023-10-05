@@ -190,6 +190,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "MediatR": "12.1.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Npgsql": "7.0.6"
         },
@@ -198,6 +199,21 @@
         },
         "runtime": {
           "bin/placeholder/Database.Application.dll": {}
+        }
+      },
+      "User.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Database.Application": "1.0.0",
+          "MediatR": "12.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/User.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/User.Application.dll": {}
         }
       }
     }
@@ -693,6 +709,11 @@
       "type": "project",
       "path": "../Database.Application/Database.Application.csproj",
       "msbuildProject": "../Database.Application/Database.Application.csproj"
+    },
+    "User.Application/1.0.0": {
+      "type": "project",
+      "path": "../User.Application/User.Application.csproj",
+      "msbuildProject": "../User.Application/User.Application.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -700,7 +721,8 @@
       "Database.Application >= 1.0.0",
       "MediatR >= 12.1.1",
       "Microsoft.AspNetCore.OpenApi >= 7.0.11",
-      "Swashbuckle.AspNetCore >= 6.5.0"
+      "Swashbuckle.AspNetCore >= 6.5.0",
+      "User.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -732,6 +754,9 @@
           "projectReferences": {
             "C:\\Users\\salov\\Desktop\\Программы\\Githab\\Database\\src\\Database\\Database.Application\\Database.Application.csproj": {
               "projectPath": "C:\\Users\\salov\\Desktop\\Программы\\Githab\\Database\\src\\Database\\Database.Application\\Database.Application.csproj"
+            },
+            "C:\\Users\\salov\\Desktop\\Программы\\Githab\\Database\\src\\Database\\User.Application\\User.Application.csproj": {
+              "projectPath": "C:\\Users\\salov\\Desktop\\Программы\\Githab\\Database\\src\\Database\\User.Application\\User.Application.csproj"
             }
           }
         }

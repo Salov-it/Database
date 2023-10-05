@@ -5,20 +5,22 @@ namespace Database.Application.PostgresDatabase
 {
     public class Repository : IRepository
     {
-        private readonly IRepository _repository;
-        public Repository(IRepository repository)
+        private readonly string _connect;
+        Config config = new Config();
+        public Repository()
         {
-            _repository = repository;
+            _connect = config.PostgresConnectionString;
         }
-
-        public async void Add(string Table,string entity,string Fields, string VALUES)
+        public async void UserAdd(string Login,string Password,string AccessToken)
         {
-            await using var dataSource = NpgsqlDataSource.Create(Config.PostgresConnectionString);
-            await using (var cmd = dataSource.CreateCommand($"INSERT INTO {Table} ({Fields}) VALUES ({VALUES})"))
+            await using var dataSource = NpgsqlDataSource.Create(_connect);
+            await using (var cmd = dataSource.CreateCommand("INSERT INTO Users (login,password,accesstoken) VALUES (@Login,@Password,@AccessToken)"))
             {
-                cmd.Parameters.AddWithValue(Fields,entity);
+                cmd.Parameters.AddWithValue("Login",Login);
+                cmd.Parameters.AddWithValue("Password",Password);
+                cmd.Parameters.AddWithValue("AccessToken",AccessToken);
                 await cmd.ExecuteNonQueryAsync();
-            }
+            }  
         }
 
         public void Delete(string entity)
@@ -37,6 +39,11 @@ namespace Database.Application.PostgresDatabase
         }
 
         public void Update(string entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UserCreateTable()
         {
             throw new NotImplementedException();
         }

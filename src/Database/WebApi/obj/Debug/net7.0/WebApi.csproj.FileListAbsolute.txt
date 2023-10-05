@@ -34,3 +34,7 @@ C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\WebApi\ob
 C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\WebApi\obj\Debug\net7.0\WebApi.pdb
 C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\WebApi\bin\Debug\net7.0\MediatR.dll
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\WebApi\bin\Debug\net7.0\MediatR.Contracts.dll
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\WebApi\bin\Debug\net7.0\User.Application.dll
+C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\WebApi\bin\Debug\net7.0\User.Application.pdb

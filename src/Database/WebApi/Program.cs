@@ -1,10 +1,12 @@
 using Database.Application;
+using User.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
 IConfiguration configuration = builder.Configuration;
 
 builder.Services.AddDatabase();
+builder.Services.AddUserServices();
 // Add services to the container.
 
 builder.Services.AddControllers();

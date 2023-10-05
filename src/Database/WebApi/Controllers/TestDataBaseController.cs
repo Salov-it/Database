@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using User.Application.CQRS.Command;
 
 namespace WebApi.Controllers
 {
@@ -14,11 +15,11 @@ namespace WebApi.Controllers
         }
        
         [HttpPost("Add")]
-        public async Task<IActionResult> Add()
+        public async Task<IActionResult> Add([FromBody] JsonContentModel json)
         {
-            var content = new PostAuthorizationCommand
+            var content = new AddCommand
             {
-                authorizationModel = authorizationModel
+                JsonContent = json
             };
             var answer = await mediator.Send(content);
             return Ok(answer);
@@ -34,6 +35,13 @@ namespace WebApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        public class JsonContent
+        {
+            public string Login { get; set; }
+            public string Password { get; set; }
+            public string AccessToken { get; set; }
         }
     }
 }
