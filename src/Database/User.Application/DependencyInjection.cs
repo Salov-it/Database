@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using User.Application.CQRS.Command;
+using User.Application.CQRS.Command.Add;
 
 namespace User.Application
 {

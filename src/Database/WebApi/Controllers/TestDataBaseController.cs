@@ -1,6 +1,11 @@
-﻿using MediatR;
+﻿using Database.Application.Model;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using User.Application.CQRS.Command;
+using User.Application.CQRS.Command.Add;
+using User.Application.CQRS.Command.UsersCreate;
+using User.Application.CQRS.Query.GetAllUsersTable;
+using User.Application.Model;
 
 namespace WebApi.Controllers
 {
@@ -15,33 +20,36 @@ namespace WebApi.Controllers
         }
        
         [HttpPost("Add")]
-        public async Task<IActionResult> Add([FromBody] JsonContentModel json)
+        public async Task<IActionResult> Add([FromBody] AddModel addModel)
         {
             var content = new AddCommand
             {
-                JsonContent = json
+                AddModel = addModel
             };
             var answer = await mediator.Send(content);
             return Ok(answer);
         }
 
-        // PUT api/<TestDataBaseController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPost("UsersCreateTable")]
+        public async Task<IActionResult> UsersCreateTable([FromBody] UsersCreateModel createModel)
         {
+            var content = new UsersCreateCommand
+            {
+                UsersCreateModel = createModel
+            };
+            var answer = await mediator.Send(content);
+            return Ok(answer);
         }
 
-        // DELETE api/<TestDataBaseController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpGet("GetAllUsersTable")]
+        public async Task<IActionResult> GetAllUsersTable()
         {
-        }
-
-        public class JsonContent
-        {
-            public string Login { get; set; }
-            public string Password { get; set; }
-            public string AccessToken { get; set; }
+            var content = new UsersTableCommand
+            {
+                
+            };
+            var answer = await mediator.Send(content);
+            return Ok(answer);
         }
     }
 }

@@ -1,20 +1,27 @@
 ﻿using Database.Application.Interface;
+using Database.Application.Model;
 using Npgsql;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Database.Application.PostgresDatabase
 {
     public class Repository : IRepository
     {
         private readonly string _connect;
+        public List<UsersTableModel> GetAllResult { get; set; }
         Config config = new Config();
         public Repository()
         {
             _connect = config.PostgresConnectionString;
         }
 
-        public void UserCreateTable()
+        public async void UserCreateTable()
         {
-            throw new NotImplementedException();
+            await using var dataSource = NpgsqlDataSource.Create(_connect);
+            await using (var cmd = dataSource.CreateCommand("CREATE TABLE Users (Login TEXT,Password TEXT,AccessToken TEXT);"))
+            {
+                await cmd.ExecuteNonQueryAsync();
+            }
         }
 
         public async void UserAdd(string Login,string Password,string AccessToken)
@@ -29,22 +36,42 @@ namespace Database.Application.PostgresDatabase
             }  
         }
 
-        public List<string> GetAll()
+        public async Task<List<UsersTableModel>> GetAll()
+        {
+            await using var dataSource = NpgsqlDataSource.Create(_connect);
+            await using (var cmd = dataSource.CreateCommand("SELECT * FROM Users;"))
+            {
+                await using var reader = await cmd.ExecuteReaderAsync();
+               
+                while (await reader.ReadAsync())
+                {
+                    var login = reader.GetString(0);
+                    var password = reader.GetString(1);
+                    var accessToken = reader.GetString(2);
+                    UsersTableModel usersTable = new UsersTableModel
+                    {
+                        Login = login,
+                        Password = password,
+                        AccessToken = accessToken
+                    };
+                    GetAllResult.Add(usersTable);
+                }
+                return GetAllResult;
+               
+            }
+        }
+
+        public Task<string> GetById()
         {
             throw new NotImplementedException();
         }
 
-        public Task<string> GetById(int id)
+        public void Update()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(string entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(string entity)
+        public void Delete()
         {
             throw new NotImplementedException();
         }

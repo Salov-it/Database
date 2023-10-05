@@ -1,4 +1,4 @@
-﻿
+﻿using Database.Application.Model;
 
 namespace Database.Application.Interface
 {
@@ -6,9 +6,9 @@ namespace Database.Application.Interface
     {
         void UserCreateTable();
         void UserAdd(string Login, string Password, string AccessToken);
-        List<string> GetAll();
-        Task<string> GetById(int id);
-        void Update(string entity);
-        void Delete(string entity);
+       Task<List<UsersTableModel>> GetAll();
+        Task<string> GetById();
+        void Update();
+        void Delete();
     }
 }
