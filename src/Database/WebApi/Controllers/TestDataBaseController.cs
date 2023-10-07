@@ -1,7 +1,5 @@
-﻿using Database.Application.Model;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using User.Application.CQRS.Command;
 using User.Application.CQRS.Command.Add;
 using User.Application.CQRS.Command.DeleteTable;
 using User.Application.CQRS.Command.UsersCreate;
