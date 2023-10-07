@@ -228,19 +228,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\salov\\.nuget\\packages\\": {}
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\salov\\Desktop\\Программы\\Githab\\Database\\src\\Database\\Database.Application\\Database.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\Database\\src\\Database\\Database.Application\\Database.Application.csproj",
       "projectName": "Database.Application",
-      "projectPath": "C:\\Users\\salov\\Desktop\\Программы\\Githab\\Database\\src\\Database\\Database.Application\\Database.Application.csproj",
-      "packagesPath": "C:\\Users\\salov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\salov\\Desktop\\Программы\\Githab\\Database\\src\\Database\\Database.Application\\obj\\",
+      "projectPath": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\Database\\src\\Database\\Database.Application\\Database.Application.csproj",
+      "packagesPath": "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\Database\\src\\Database\\Database.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\salov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Администратор.VDSWIN2K16\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

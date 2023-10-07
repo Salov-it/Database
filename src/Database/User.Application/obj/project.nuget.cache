@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "iDQrfVLLRHYIcRx+zXAlYSCVnQUuSyCKuTYKvEsinhepYHvAzQ9bRMwOdS7RqzVZxBYx8qLMPmWFfkxoRn8amw==",
+  "dgSpecHash": "2cjAkMq1AumIxw11vmLCx+2oKkuzjZBeHFzNMIylxEh1Mkzvb4Nsn7JR000KBlju6wmf7lOtFJOV4HBUU3Song==",
   "success": true,
-  "projectFilePath": "C:\\Users\\salov\\Desktop\\Программы\\Githab\\Database\\src\\Database\\User.Application\\User.Application.csproj",
+  "projectFilePath": "C:\\Users\\Администратор.VDSWIN2K16\\Desktop\\Githab\\Database\\src\\Database\\User.Application\\User.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\salov\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
-    "C:\\Users\\salov\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\salov\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\salov\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\salov\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512"
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Администратор.VDSWIN2K16\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512"
   ],
   "logs": []
 }

@@ -26,7 +26,8 @@
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "use64Bit": true
     }
   },
   "$schema": "https://json.schemastore.org/launchsettings.json",
@@ -34,8 +35,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:49819/",
-      "sslPort": 44323
+      "applicationUrl": "http://localhost:7001/",
+      "sslPort": 0
     }
   }
 }

@@ -10,3 +10,15 @@ C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.
 C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\refint\Database.Application.dll
 C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.pdb
 C:\Users\salov\Desktop\Программы\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\ref\Database.Application.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\bin\Debug\net7.0\Database.Application.deps.json
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\bin\Debug\net7.0\Database.Application.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\bin\Debug\net7.0\Database.Application.pdb
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.csproj.AssemblyReference.cache
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.AssemblyInfoInputs.cache
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.AssemblyInfo.cs
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.csproj.CoreCompileInputs.cache
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\refint\Database.Application.dll
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\Database.Application.pdb
+C:\Users\Администратор.VDSWIN2K16\Desktop\Githab\Database\src\Database\Database.Application\obj\Debug\net7.0\ref\Database.Application.dll

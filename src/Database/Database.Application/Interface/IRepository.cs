@@ -7,7 +7,7 @@ namespace Database.Application.Interface
         void UserCreateTable();
         void UserAdd(string Login, string Password, string AccessToken);
        Task<List<UsersTableModel>> GetAll();
-        Task<string> GetById();
+        Task<UsersTableModel> GetById(int id);
         void Update();
         void Delete();
     }

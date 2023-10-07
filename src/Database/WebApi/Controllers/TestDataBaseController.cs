@@ -5,6 +5,7 @@ using User.Application.CQRS.Command;
 using User.Application.CQRS.Command.Add;
 using User.Application.CQRS.Command.UsersCreate;
 using User.Application.CQRS.Query.GetAllUsersTable;
+using User.Application.CQRS.Query.GetUsersId;
 using User.Application.Model;
 
 namespace WebApi.Controllers
@@ -47,6 +48,17 @@ namespace WebApi.Controllers
             var content = new UsersTableCommand
             {
                 
+            };
+            var answer = await mediator.Send(content);
+            return Ok(answer);
+        }
+
+        [HttpPost("GetUsersId")]
+        public async Task<IActionResult> GetUsersId([FromBody] UsersId id)
+        {
+            var content = new GetUsersIdCommand
+            {
+                usersId = id
             };
             var answer = await mediator.Send(content);
             return Ok(answer);

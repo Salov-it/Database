@@ -1,6 +1,7 @@
 ﻿using Database.Application.Interface;
 using Database.Application.Model;
 using Npgsql;
+using System.Reflection.PortableExecutable;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Database.Application.PostgresDatabase
@@ -8,7 +9,8 @@ namespace Database.Application.PostgresDatabase
     public class Repository : IRepository
     {
         private readonly string _connect;
-        public List<UsersTableModel> GetAllResult { get; set; }
+        public List<UsersTableModel> GetAllResult = new List<UsersTableModel>();
+        public UsersTableModel ResultGetById { get; set; }
         Config config = new Config();
         public Repository()
         {
@@ -18,7 +20,7 @@ namespace Database.Application.PostgresDatabase
         public async void UserCreateTable()
         {
             await using var dataSource = NpgsqlDataSource.Create(_connect);
-            await using (var cmd = dataSource.CreateCommand("CREATE TABLE Users (Login TEXT,Password TEXT,AccessToken TEXT);"))
+            await using (var cmd = dataSource.CreateCommand("CREATE TABLE Users (id SERIAL PRIMARY KEY,Login TEXT,Password TEXT,AccessToken TEXT);"))
             {
                 await cmd.ExecuteNonQueryAsync();
             }
@@ -61,9 +63,28 @@ namespace Database.Application.PostgresDatabase
             }
         }
 
-        public Task<string> GetById()
+        public async Task<UsersTableModel> GetById(int id)
         {
-            throw new NotImplementedException();
+            await using var dataSource = NpgsqlDataSource.Create(_connect);
+            await using (var cmd = dataSource.CreateCommand($"SELECT login,password,accesstoken FROM Users WHERE id = {id};"))
+            {
+                await using var reader = await cmd.ExecuteReaderAsync();
+                while (await reader.ReadAsync())
+                {
+                    var login = reader.GetString(0);
+                    var password = reader.GetString(1);
+                    var accessToken = reader.GetString(2);
+                    UsersTableModel usersTable = new UsersTableModel
+                    {
+                        Login = login,
+                        Password = password,
+                        AccessToken = accessToken
+                    };
+                    ResultGetById = usersTable;
+                }
+                return ResultGetById;
+            }
+            
         }
 
         public void Update()
