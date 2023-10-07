@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using User.Application.CQRS.Command;
 using User.Application.CQRS.Command.Add;
+using User.Application.CQRS.Command.DeleteTable;
 using User.Application.CQRS.Command.UsersCreate;
 using User.Application.CQRS.Query.GetAllUsersTable;
 using User.Application.CQRS.Query.GetUsersId;
@@ -59,6 +60,17 @@ namespace WebApi.Controllers
             var content = new GetUsersIdCommand
             {
                 usersId = id
+            };
+            var answer = await mediator.Send(content);
+            return Ok(answer);
+        }
+
+        [HttpGet("DeleteTableUsers")]
+        public async Task<IActionResult> DeleteTableUsers()
+        {
+            var content = new DeleteTableCommand
+            {
+                
             };
             var answer = await mediator.Send(content);
             return Ok(answer);
