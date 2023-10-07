@@ -1,8 +1,6 @@
 ﻿using Database.Application.Interface;
 using Database.Application.Model;
 using Npgsql;
-using System.Reflection.PortableExecutable;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Database.Application.PostgresDatabase
 {
@@ -86,16 +84,13 @@ namespace Database.Application.PostgresDatabase
             }
             
         }
-
-        public void Update()
+        public async void Delete()
         {
-            throw new NotImplementedException();
+            await using var dataSource = NpgsqlDataSource.Create(_connect);
+            await using (var cmd = dataSource.CreateCommand("DROP TABLE Users;"))
+            {
+                await cmd.ExecuteNonQueryAsync();
+            }
         }
-
-        public void Delete()
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }
